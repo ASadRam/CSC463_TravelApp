@@ -1,0 +1,32 @@
+<form action="/action_page.php">
+  <label for="originationAirport">Origination Airport:</label>
+  <select name="originationAirport" id="originationAirport">
+    <option value="ord">OHare</option>
+    <option value="lag">NY Laguardia</option>
+    <option value="bos">Boston</option>
+  </select>
+  <br><br>
+
+  <label for="destinationAirport">Destination Airport:</label>
+  <select name="destinationAirport" id="destinationAirport">
+    <option value="ord">OHare</option>
+    <option value="lag">NY Laguardia</option>
+    <option value="bos">Boston</option>
+  </select>
+  <br><br>
+
+  <label for="travelDate">Enter travel date:</label>
+  <input type="date" id="travelDate" name="travelDate" min="2020-10-01">
+  <br><br>
+
+  <label for="numOfTravelers">Num of travelers:</label>
+  <input type="number" id="numOfTravelers" name="numOfTravelers" min="1" max="5">
+  <br><br>
+
+  <input type="submit">
+  <br><br>
+
+  <label for="price">The price of travel will be: {{price}}</label>
+  <input type="number" id="price" name="price" >
+  <br><br>
+</form>
