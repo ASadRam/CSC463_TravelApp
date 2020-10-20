@@ -6,23 +6,32 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./xyz.component.css']
 })
 export class XyzComponent implements OnInit {
-
-  //public numPple;
   numPpl:number = 0;
   price:number = 0;
-
+  numOfTravelers:number = 0;
   constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
+
+  Cities: string[] = ['Chicago','New York','London', 'Paris', 'Tokyo', 'Singapore', 'Bangkok'];
 
 
-  public Calc():void{
-    //price = this.numPple * 150;
 
-    this.price = this.numPpl * 150;
+  public Calc(): void {
+    // price = this.numPple * 150;
+
+    //this.price = 150;
+    //console.log(this.price);
+
+    this.price = this. numOfTravelers * 150;
+    console.log(this.price);
   }
 
 
-
+  public addToList(): void {
+      console.log(this.numOfTravelers);
+      this.price = this.numOfTravelers * 150;
+  }
 
 }
