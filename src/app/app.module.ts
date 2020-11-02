@@ -4,15 +4,27 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { XyzComponent } from './xyz/xyz.component';
 import { FormsModule } from '@angular/forms';
+import { AboutComponent } from './about/about.component';
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [
+  {path: 'todo', component:AboutComponent},
+  {path: 'xyz', component:XyzComponent},
+  {path: 'about',component:AboutComponent},
+  {path: '', redirectTo: '/todo', pathMatch: 'full'}
+];
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    XyzComponent
+    XyzComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
